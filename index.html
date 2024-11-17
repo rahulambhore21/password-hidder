@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Hidder</title>
+</head>
+<body>
+    <div class="container">
+        <input type="password" placeholder="Enter Password" id="input">
+        <img src="eye-icons/eye-close.png" id="img">
+    </div>
+</body>
+<script>
+    const inputBox = document.getElementById("input");
+    const img = document.getElementById("img");
+
+    img.onclick = function toggleEye(){
+        if(inputBox.type == "password"){
+            inputBox.type = "text";
+            img.src = "eye-icons/eye-open.png";
+        }
+        else{
+            inputBox.type = "password";
+            img.src = "eye-icons/eye-close.png";
+        }
+    }
+</script>
+</html>
